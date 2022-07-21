@@ -6,16 +6,12 @@ import java.sql.DriverManager;
 public class DAO {
 	private String driver = "com.mysql.cj.jdbc.Driver";
 
-	/** The url. */
 	private String url = "jdbc:mysql://127.0.0.1:3306/dbagenda?useTimezone=true&serverTimezone=UTC";
 
-	/** The user. */
 	private String user = "root";
 
-	/** The password. */
 	private String password = "123456789";
 
-	
 	private Connection conectar() {
 		Connection con = null;
 		try {
@@ -27,16 +23,4 @@ public class DAO {
 			return null;
 		}
 	}
-	public void testeConexao() {
-		try {
-			Connection con = conectar();
-			System.out.println(con);
-			con.close();
-		}catch (Exception e) {
-			System.out.println(e);
-			
-		}
-		
-	}
-
 }
