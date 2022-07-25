@@ -36,7 +36,7 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contat
 				<td><%=lista.get(i).getFone()%></td>
 				<td><%=lista.get(i).getEmail()%></td>
 				<td>
-					<a href="select?idcon=<%=lista.get(i).getId()%>"
+					<a href="select?id=<%=lista.get(i).getId()%>"
 					class="Botao1">Editar</a>
 					<a href="javascript: confirmar(<%=lista.get(i).getId()%>)"
 					class="Botao2">Excluir</a>

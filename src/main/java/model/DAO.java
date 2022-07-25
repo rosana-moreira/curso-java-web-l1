@@ -65,7 +65,7 @@ public class DAO {
 	}
 
 	public void selecionarContato(JavaBeans contato) {
-		String read2 = "select * from contatos where idcon = ?";
+		String read2 = "select * from contatos where id = ?";
 		try {
 			Connection con = conectar();
 			PreparedStatement pst = con.prepareStatement(read2);
@@ -84,7 +84,7 @@ public class DAO {
 	}
 
 	public void alterarContato(JavaBeans contato) {
-		String update = "update contatos set nome=?,fone=?,email=? where idcon=?";
+		String update = "update contatos set nome=?,fone=?,email=? where id=?";
 		try {
 			Connection con = conectar();
 			PreparedStatement pst = con.prepareStatement(update);
@@ -100,7 +100,7 @@ public class DAO {
 	}
 
 	public void deletarContato(JavaBeans contato) {
-		String delete = "delete from contatos where idcon=?";
+		String delete = "delete from contatos where id=?";
 		try {
 			Connection con = conectar();
 			PreparedStatement pst = con.prepareStatement(delete);
